@@ -15,7 +15,7 @@ import java.util.function.ToLongFunction;
  * @author ags
  *
  */
-public class Counter {
+public final class Counter {
     
     private static ConcurrentHashMap<String, AtomicLong> cache = new ConcurrentHashMap<>();
 

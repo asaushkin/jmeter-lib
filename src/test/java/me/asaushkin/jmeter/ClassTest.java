@@ -16,10 +16,8 @@ public class ClassTest {
         assertEquals(1L, Counter.incrementAndGet("checkIncrement"));
     }
     
-    @Test(expected=IllegalAccessException.class)
+    @Test
     public void testConstructorPrivate() throws Exception {
-        Counter.class.newInstance();
-        fail("Utility class constructor should be private");
+        UtilityClass.assertUtilityClassWellDefined(Counter.class);
     }
-    
 }
